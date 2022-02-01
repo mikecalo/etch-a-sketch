@@ -14,7 +14,13 @@
 </div>
 
 <div class="content">
-    <button class="btn">Clear</button>
+    <form class="slider">
+        <div>Grid Size: </div>
+        <input type="range" id="myRange" name="amountRange" min="1" max="32" value="16" oninput="this.form.amountInput.value=this.value" />
+        <input type="number" name="amountInput" min="1" max="32" value="16" oninput="this.form.amountRange.value=this.value" />
+    </form>
+    <button class="btn-create">Create New Grid</button>
+    <button class="btn-clear">Erase</button>
     <div class="container">
 
     </div>

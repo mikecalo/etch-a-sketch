@@ -1,15 +1,20 @@
 const container = document.querySelector('.container')
-document.container = createGrid()
+const slider = document.querySelector('#myRange').value
+// document.container = createGrid()
+// const squares = Array.from(document.querySelectorAll('.squares'));
+// squares.forEach(square => square.addEventListener('mouseover', addFill))
+const btnCreate = document.querySelector('.btn-create').onclick = createNewGrid
+const btnClear = document.querySelector('.btn-clear').onclick = clearGrid
 
-// will eventually change 256 (16 x 16) to whatever user inputs.
 function createGrid () {
-    for (let i = 0; i < 256; i++) {
+    for (let i = 0; i < slider * slider; i++) {
         const grid = document.createElement('div')
         grid.className = 'squares';
-        // grid.className = 'unfill';
         grid.id = `div-${i + 1}`;
         container.appendChild(grid) 
     }
+const squares = Array.from(document.querySelectorAll('.squares'));
+squares.forEach(square => square.addEventListener('mouseover', addFill))
 }
 
 function addFill(e) {
@@ -17,21 +22,20 @@ function addFill(e) {
   }
 
 
-function clearGrid(e) {
-    // let gridSize = prompt("Select size of new grid (maximum: 100):")
-    const grid = Array.from(document.querySelectorAll('.fill'));
-        // if (gridSize <= 100) {
-            for (const fill of grid) {
-                fill.classList.remove('fill')
-            }
-        // } else {
-        //     alert('Enter valid number between 1 - 100')
-        // }
-            
-        
+function createNewGrid(e) {
+    const grid = Array.from(document.querySelectorAll('.squares'));
+        for (const squares of grid) {
+            squares.remove()
+        }
+    createGrid()
 }
 
-const squares = Array.from(document.querySelectorAll('.squares'));
-squares.forEach(square => square.addEventListener('mouseover', addFill))
+function clearGrid(e) {
+    const fill = Array.from(document.querySelectorAll('.fill'));
+        for (const squares of fill) {
+            squares.classList.remove('fill')
+        }
+}
 
-const btn = document.querySelector('.btn').onclick = clearGrid
+
+
