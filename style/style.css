@@ -17,7 +17,9 @@
 .container {
     margin: auto; 
     display: grid;
-    grid-template-columns: repeat(16, 6.25%);
+    /* grid-template-columns: auto-fill;
+    grid-template-rows: auto-fill; */
+    /* grid-template-columns: repeat(16, 6.25%); */
     height: 600px;
     width: 600px;
     background-color: rgb(240, 238, 238);
@@ -76,4 +78,12 @@ border: 1px solid #f58985;
 }
 .btn-clear:hover {
 background-color: red;
+}
+
+.btn-undo {
+background-color: #80d387;
+border: 1px solid #80d387
+}
+.btn-undo:hover {
+background-color: green;
 }
