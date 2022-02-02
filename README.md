@@ -7,4 +7,4 @@
   <li>DOM Manipulation</li>
 </p>
   
- <p><a href=https://mikecalo.github.io/etch-a-sketch</a> </p>
+ <p><a href=https://mikecalo.github.io/etch-a-sketch>Live Preview</a></p>
