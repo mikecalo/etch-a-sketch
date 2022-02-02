@@ -12,24 +12,23 @@
 <div class="header">
     <header class="text">Etch-A-Sketch</header>
 </div>
-
 <div class="content">
     <form class="slider">
         <div>Canvas Size: </div>
         <input type="range" id="myRange" name="amountRange" min="1" max="50" value="16" oninput="this.form.amountInput.value=this.value" />
         <input type="number" name="amountInput" min="1" max="50" value="16" oninput="this.form.amountRange.value=this.value" />
     </form>
-    <button class="btn-create">Create New Canvas</button>
-    <button class="btn-clear">Clear</button>
+    <div class="buttons">
+        <button class="btn-create">Create New Canvas</button>
+        <button class="btn-clear">Clear</button>
+        <label class="switch"> Rainbow Mode
+            <input type="checkbox" id="check">
+            <span class="slider round"></span>
+      </label>
+    </div>
     <div class="container">
-
     </div>
 </div>
-
-
-
-
-
 <script src="script/script.js" defer></script>
 </body>
 </html>

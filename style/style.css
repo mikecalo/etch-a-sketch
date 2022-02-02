@@ -10,18 +10,14 @@
     color: #1f2937;
 }
 .content {
-    padding: 16px;
     text-align: center;
 }
 
 .container {
     margin: auto; 
     display: grid;
-    /* grid-template-columns: auto-fill;
-    grid-template-rows: auto-fill; */
-    /* grid-template-columns: repeat(16, 6.25%); */
-    height: 600px;
-    width: 600px;
+    height: 575px;
+    width: 575px;
     background-color: rgb(240, 238, 238);
     border: 2px solid #1f2937;
     border-radius: 6px;
@@ -30,7 +26,6 @@
 .squares {
     height: 100%;
     width: 100%;
-    border: 0.5px solid #d2d6db;
 }
 
 .unfill {
@@ -48,10 +43,14 @@
     opacity: 0.5;
     font-family: cursive;
 }
-
 .slider:hover {
     opacity: 1;
+}
 
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 button {
@@ -62,11 +61,9 @@ border-radius: 5px;
 padding: 2px 24px;
 }
 
-
 .btn-create {
 background-color: #a6d4fa;
 border: 1px solid #a6d4fa;
-
 }
 .btn-create:hover {
 background-color: blue;
@@ -86,4 +83,12 @@ border: 1px solid #80d387
 }
 .btn-undo:hover {
 background-color: green;
+}
+
+.switch {
+  font-family: cursive;
+  opacity: 0.7;
+}
+.switch:hover {
+    opacity: 1;
 }

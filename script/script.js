@@ -19,8 +19,14 @@ squares.forEach(square => square.addEventListener('mouseover', addFill))
 }
 
 function addFill(e) {
-    e.target.classList.add('fill');
-  }
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    const checkBox = document.querySelector('#check')
+    if (checkBox.checked == true) {
+        e.target.style.backgroundColor = "#" + randomColor;
+    
+    } else e.target.classList.add('fill');
+    
+}
 
 function createNewGrid(e) {
     const grid = Array.from(document.querySelectorAll('.squares'));
@@ -31,9 +37,10 @@ function createNewGrid(e) {
 }
 
 function clearGrid(e) {
-    const fill = Array.from(document.querySelectorAll('.fill'));
-        for (const squares of fill) {
-            squares.classList.remove('fill');
+    const squares = Array.from(document.querySelectorAll('.squares'));
+        for (const square of squares) {
+            square.style.removeProperty('background-color');
+            square.classList.remove('fill');
         }
 }
 
